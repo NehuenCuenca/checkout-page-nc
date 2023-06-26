@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <link rel="icon" href="devchallenges.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Devchallenges</title>
+</head>
+
+<body>
+  <main>
+    <form id="checkout-form">
+      <h1>Checkout</h1>
+
+      <div id="contact" class="form-section">
+        <span class="title-form-section">Contact information</span>
+
+        <div class="field">
+          <label for="emailField">emailField</label>
+          <input type="email" id="emailField">
+        </div>
+
+        <div class="field">
+          <label for="telField">telField</label>
+          <input type="tel" id="telField">
+        </div>
+      </div>
+
+      <div id="adress" class="form-section">
+        <span class="title-form-section">Shipping address</span>
+
+        <div class="field">
+          <label for="fullNameField">fullNameField</label>
+          <input type="text" id="fullNameField">
+        </div>
+
+        <div class="field">
+          <label for="adressField">adressField</label>
+          <input type="text" id="adressField">
+        </div>
+
+        <div class="field">
+          <label for="cityField">cityField</label>
+          <input type="text" id="cityField">
+        </div>
+
+        <div class="field">
+          <label for="countryField">countryField</label>
+            <input type="text" id="countryField">
+        </div>
+
+        <div class="field">
+          <label for="postalCodeField">postalCodeField</label>
+          <input type="text" id="postalCodeField">
+        </div>
+
+        <div class="field">
+          <input type="checkbox" id="check">
+          <label for="check">Save this information for next time</label>
+        </div>
+      </div>
+
+      <button type="button">Continue</button>
+    </form>
+
+    <div id="float-card">
+      <h1>Cart card</h1>
+      <ul class="products-in-cart">
+        <div class="product-item">zapatillas</div>
+        <div class="product-item">sombrero</div>
+      </ul>
+      <div class="prices-and-taxes"></div>
+    </div>
+  </main>
+</body>
+
+</html>
