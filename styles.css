@@ -17,22 +17,30 @@ html{
 
 body {
     height: auto;
-    padding: 3% 15%;
+    padding: 0 15%;
 }
 
 main {
-    background-color: cadetblue;
     width: 100%;
     display: grid;
     grid-auto-columns: 50% 50%;
     grid-auto-rows: auto;
     grid-template-areas: "form cart";
+    /* gap: 2vh 3vw ; */
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
 form#checkout-form {
     grid-area: form;
     width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #checkout-form h1 {
@@ -57,11 +65,171 @@ form .form-section {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
 
+.form-section .field label { padding-left: 2%;}
+.form-section .field input {
+    border: 1px solid #828282;
+    border-radius: .8rem;
+    padding: 1rem;
+}
+
+.field:has(input[type="checkbox"]) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2vh;
+}
+
+.field #checkSaveInformation {
+    width: 10%;
+    width: 21px;
+    height: 21px;
+    accent-color: #f2a96a;
+}
+.field #checkSaveInformation + label { 
+    width: 90%;
+    padding-left: .5rem;
+}
+
+.form-section .two-columns:has(.field) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto;
+    justify-content: space-between;
+}
+
+
+form#checkout-form button[type="submit"] {
+    width: 40%;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: .8rem;
+    background-color: #F2994A;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    place-self: end;
 }
 
 #float-card {
     grid-area: cart;
-    width: 100%;
+    width: 90%;
+    height: 55%;
+    max-height: 60%;
+    margin-top: 30%;
     background-color: #F2F2F2;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    place-self: start center;
+}
+
+#float-card ul.products-in-cart {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3vh;
+    justify-content: flex-start;
+}
+
+.products-in-cart .product-item {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 30% 50%;
+    grid-template-areas: "img info";
+    justify-items: center;
+    justify-content: center;
+    gap: 0 2vw;
+}
+
+.product-item img {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+    border-radius: .8rem;
+}
+.product-item .info-product {
+    grid-area: info;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "name-product"
+    "prices"
+    "quantity";
+}
+
+.info-product .name-product { 
+    grid-area: name-product;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.info-product .prices { 
+    width: 80%;
+    grid-area: prices;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-product .prices .original-price{
+    text-decoration: line-through;
+    font-size: .8rem;
+}
+.info-product .prices .final-price{
+    color:#F2994A;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.info-product .quantity { 
+    grid-area: quantity;
+    padding: .2rem;
+    border: 1px solid #828282;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.info-product .quantity button {
+    padding: .1rem .5rem;
+    background-color: #e0e0e0;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: .2rem;
+    cursor: pointer;
+} 
+
+ul.prices-and-taxes {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.prices-and-taxes li { 
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #BDBDBD;
+    padding-top: .5rem;
+}
+
+footer {
+    padding: 1rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #BDBDBD;
 }
