@@ -26,13 +26,18 @@ main {
     grid-auto-columns: 50% 50%;
     grid-auto-rows: auto;
     grid-template-areas: "form cart";
-    /* gap: 2vh 3vw ; */
 }
 
-ul {
+
+ul, h1 {
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+h1#title { 
+    padding-top: 5vh;
+    color: #4E5150;
 }
 
 form#checkout-form {
@@ -65,6 +70,7 @@ form .form-section {
     width: 100%;
     display: flex;
     flex-direction: column;
+    row-gap: 5px;
 }
 
 .form-section .field label { padding-left: 2%;}
@@ -119,7 +125,7 @@ form#checkout-form button[type="submit"] {
     width: 90%;
     height: 55%;
     max-height: 60%;
-    margin-top: 30%;
+    margin-top: 15%;
     background-color: #F2F2F2;
     border: none;
     border-radius: 12px;
@@ -226,10 +232,34 @@ ul.prices-and-taxes {
 }
 
 footer {
-    padding: 1rem;
+    padding: .5rem;
     margin-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #BDBDBD;
+}
+
+@media (max-width: 375px) {
+    body { padding: 0 5%; }
+    
+    main {
+        width: 100%;
+        grid-auto-columns: 100%;
+        grid-auto-rows: auto auto;
+        grid-template-areas: "cart"
+        "form";
+    }
+
+    #float-card {
+        width: 95%;
+        height: 55vh;
+        max-height: 70vh;
+        margin-top: 15%;
+    }
+
+    .products-in-cart .product-item { width: 100%; }
+
+    form#checkout-form { padding: 1rem 0; }
+    form#checkout-form button[type="submit"] { padding: 1rem 1.5rem; }
 }
