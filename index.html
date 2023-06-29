@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <link rel="icon" href="devchallenges.png" />
-  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+  <link rel="icon" href="devchallenges.png"/>
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/"/>
   <link rel="stylesheet" href="styles.css">
   <title>Devchallenges</title>
 </head>
@@ -26,7 +25,7 @@
 
         <div class="field">
           <label for="telField">Phone</label>
-          <input type="tel" id="telField" placeholder="📱 Enter your phone..." required>
+          <input type="tel" id="telField" placeholder="📱 Enter your phone..." >
         </div>
       </div>
 
@@ -35,7 +34,7 @@
 
         <div class="field">
           <label for="fullNameField">Full name</label>
-          <input type="text" id="fullNameField" placeholder="👤 Your full name.." required>
+          <input type="text" id="fullNameField" placeholder="👤 Your full name.." >
         </div>
 
         <div class="field">
@@ -51,9 +50,9 @@
         <div class="two-columns">
           <div class="field">
             <label for="countryField">Country</label>
-            <input list="countrys" type="text" id="countryField" placeholder="🌎 Your country.." required>
+            <input list="countrys" type="text" id="countryField" placeholder="🌎 Your country.." required >
             <datalist id="countrys">
-              <option value="Argentina">
+              <option value="Argentina" >
               <option value="Brazil">
               <option value="Uruguay">
               <option value="Chile">
@@ -62,7 +61,7 @@
 
           <div class="field">
             <label for="postalCodeField">Postal</label>
-            <input type="text" id="postalCodeField" placeholder="🔢 Your postal code.." required>
+            <input type="text" id="postalCodeField" placeholder="🔢 Your postal code..">
           </div>
         </div>
 
@@ -76,7 +75,6 @@
     </form>
 
     <div id="float-card">
-      <!-- <h1>Cart card</h1> -->
       <ul class="products-in-cart">
         <li class="product-item">
           <img src="photo1.png" alt="vintage backbag">
@@ -90,9 +88,9 @@
             </div>
 
             <div class="quantity">
-              <button type="button">-</button>
+              <button type="button" data-operation="minus">-</button>
               <span> 1 </span>
-              <button type="button">+</button>
+              <button type="button" data-operation="plus">+</button>
             </div>
           </div>
         </li>
@@ -108,9 +106,9 @@
             </div>
 
             <div class="quantity">
-              <button type="button">-</button>
+              <button type="button" data-operation="minus">-</button>
               <span> 1 </span>
-              <button type="button">+</button>
+              <button type="button" data-operation="plus">+</button>
             </div>
           </div>
         </li>
@@ -134,19 +132,22 @@
         </li> -->
       </ul>
 
-      <ul class="prices-and-taxes">
+      <ul class="prices-and-taxes">>
         <li>
           <span class="tag">Shipping</span>
           <span class="cost">$19</span>
         </li>
-        <li>
+        <li id="total">
           <span class="tag">Total</span>
           <span class="cost">$148.98</span>
         </li>
       </ul>
     </div>
+    <div class="modal">
+      <p></p>
+    </div>
   </main>
   <footer>created by Nehuen - devChallenges.io</footer>
 </body>
-
+<script src="main.js"></script>
 </html>

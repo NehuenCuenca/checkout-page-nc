@@ -85,9 +85,9 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Website  [Portfolio](https://portfolio-nc.netlify.app/)
+- GitHub   [NehuenCuenca](https://github.com/NehuenCuenca)
+- LinkedIn [Nehuen Cuenca](https://www.linkedin.com/in/nehuen-cuenca/)
 
 
 ## User story:
@@ -96,7 +96,7 @@ Challenge: Create a checkout page following the design. You don’t need to use 
 User story: I can see a page following the given design✅
 User story: I can input email, phone, full name, address, city, country, and postal code ✅
 User story: I can select at least 3 countries from the dropdown ✅
-User story: I can input the number of items
-User story: When I click submit button or press enter, I can see a warning if validation fails
-User story: When I click submit button or press enter, I can see a successful alert if validation succeeds
+User story: I can input the number of items ✅
+User story: When I click submit button or press enter, I can see a warning if validation fails ✅
+User story: When I click submit button or press enter, I can see a successful alert if validation succeeds ✅
 Icon: https://google.github.io/material-design-icons/
